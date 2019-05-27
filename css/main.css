@@ -5,35 +5,40 @@ html {
   font-family: sans-serif;
 }
 
+/* justify items/align items is for aligning entire grid item, justify self/align/self is for aligning items within the grid item */
+
+/* grid container */
 body {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(3, auto);
-
-  grid-template-areas: "item1 item2 item3";
+  margin: 0;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 10% auto 50px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "sidebar footer";
 }
 
-#item1 {
-  grid-area: item1;
-  /* start, end, center, stretch */
-  justify-self: end;
-  align-self: start;
-}
-#item2 {
-  grid-area: item2;
-  /* start, end, center, stretch */
-  justify-self: start;
-  align-self: end;
-}
-#item3 {
-  grid-area: item3;
-  /* start, end, center, stretch */
+.content {
+  grid-area: content;
   justify-self: center;
   align-self: center;
 }
 
-.container {
-  background: lightgray;
-  border-radius: 10px;
-  padding: 1em;
+header {
+  grid-area: header;
+  text-align: right;
+  align-self: center;
+  background-color: #333;
+}
+
+footer {
+  grid-area: footer;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: gray;
 }
