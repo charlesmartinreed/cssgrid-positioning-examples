@@ -22,16 +22,15 @@ function browserSyncReload(done) {
 
 function css() {
   return gulp
-    .src("/css/*.scss")
+    .src("./scss/**/*.scss")
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest("./css/"))
     .pipe(browsersync.stream());
 }
 
 function watchFiles() {
-  gulp
-    .watch(["*.html", "./css/*.scss"])
-    .on("change", gulp.series(css, browserSyncReload));
+  gulp.watch("./**/*.html", gulp.series(css, browserSyncReload));
+  gulp.watch("./scss/**/*", css);
 }
 
 const watch = gulp.parallel(watchFiles, browserSync);

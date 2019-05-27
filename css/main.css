@@ -1,0 +1,38 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 3rem;
+}
+
+/* responsive gallery WITHOUT media queries */
+/* auto-fit vs auto-fill; the latter only fills up the necessary space, but the former stretches out to the available space */
+/* fr representations the fractional space remaining on the dom after elements are placed */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  cursor: pointer;
+}
+
+main .card {
+  transition: transform 1s;
+}
+
+main .card:hover {
+  transform: translateY(-10px);
+}
+
+main .card img {
+  width: 100%;
+}
+
+main .card .info {
+  padding: 1rem;
+}
