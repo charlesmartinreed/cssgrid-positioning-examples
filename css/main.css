@@ -8,4 +8,12 @@ html {
 body {
   display: grid;
   grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.container {
+  background: lightgray;
+  border-radius: 10px;
+  padding: 1em;
 }
