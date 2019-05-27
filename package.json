@@ -1,0 +1,12 @@
+{
+  "name": "grid-positioning-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:charlesmartinreed/cssgrid-positioning-examples.git",
+  "author": "charlesmartinreed <charlesmartinreed@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2"
+  }
+}
